@@ -1,0 +1,1 @@
+/bin/c++ -fPIC  -Wall -O3 -std=c++11 -fopenmp  -shared -Wl,-soname,libcp.so -o libcp.so CMakeFiles/cp.dir/cutpursuit.cpp.o   -L/mnt/edisk/anaconda3/lib  -Wl,-rpath,/mnt/edisk/anaconda3/lib /mnt/edisk/anaconda3/lib/libboost_numpy37.so /mnt/edisk/anaconda3/lib/libboost_python37.so /mnt/edisk/anaconda3/lib/libpython3.7m.so 

@@ -1,0 +1,1 @@
+/bin/c++ -fPIC  -Wall -std=c++11 -fopenmp -O3  -shared -Wl,-soname,libply_c.so -o libply_c.so CMakeFiles/ply_c.dir/ply_c.cpp.o   -L/mnt/edisk/anaconda3/lib  -Wl,-rpath,/mnt/edisk/anaconda3/lib /mnt/edisk/anaconda3/lib/libboost_numpy37.so /mnt/edisk/anaconda3/lib/libboost_python37.so /mnt/edisk/anaconda3/lib/libpython3.7m.so 

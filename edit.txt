@@ -1,0 +1,2 @@
+CUDA_VISIBLE_DEVICES=0 python learning/main.py --dataset sema3d --SEMA3D_PATH /mnt/edisk/superpoint_graph/Sema3d --epochs 200 --lr_steps '[350, 400]' --test_nth_epoch 100 \
+--model_config 'gru_10,f_6' --pc_attrib xyzrgbelpsv --ptn_nfeat_stn 11 --nworkers 2 --odir "results/sema3d/best"

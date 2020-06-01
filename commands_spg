@@ -1,0 +1,11 @@
+python partition/partition.py --dataset sema3d --ROOT_PATH /home/tohj/SuperpointGraph/superpoint_graph/Sema3d --voxel_width 0.05 --reg_strength 0.02 --ver_batch 5000000
+
+python learning/sema3d_dataset.py --SEMA3D_PATH /home/tohj/SuperpointGraph/superpoint_graph/Sema3d
+
+CUDA_VISIBLE_DEVICES=0 python learning/main.py --dataset sema3d --SEMA3D_PATH /home/tohj/SuperpointGraph/superpoint_graph/Sema3d --db_test_name testred --db_train_name trainval \
+--epochs 200 --lr_steps '[350, 400, 450]' --test_nth_epoch 50 --model_config 'gru_10,f_8' --ptn_nfeat_stn 11 \
+--nworkers 2 --pc_attrib xyzrgbelpsv --odir "results/sema3d/trainval_best"
+
+python partition/partition.py --dataset sema3d --ROOT_PATH /home/tohj/SuperpointGraph/superpoint_graph/Sema3d --voxel_width 0.05 --reg_strength 0.08 --ver_batch 5000000
+
+current file: 7040_66495_no_color
